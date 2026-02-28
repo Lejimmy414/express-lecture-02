@@ -1,0 +1,33 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "First lection",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+"scripts": {
+  "build": "npx tsc",
+  "start": "node dist/server.js",
+  "dev": "npx tsx watch src/server.ts",
+  "lint": "eslint . --fix",
+  "test": "vitest",
+  "test:ui": "vitest --ui"
+},
+
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.13",
+    "eslint": "^10.0.2",
+    "globals": "^17.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vitest": "^4.0.18"
+  }
+}
