@@ -1,20 +1,15 @@
 import express from 'express';
-import rootRoutes from './routes/rootRoutes.js'
-import jsonRoutes from './routes/rootRoutes.js'
+import orderRoutes from './routes/orderRoutes.js'
 
 const app = express()
 const port = 3000
 
-// Application level middleware
-app.use(express.text());
-app.use(express.json());
+// Middleware
+app.use(express.json())
 
-// Mounting routes
-app.use('/', rootRoutes)
-app.use('/json', jsonRoutes)
+// Mount order routes
+app.use('/orders', orderRoutes)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
-app.use(express.json())

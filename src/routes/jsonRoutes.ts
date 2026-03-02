@@ -1,13 +1,13 @@
-import { Router } from 'express'
+  import { Router } from 'express'
 
-const router = Router()
+  const router = Router()
 
-router.get('/', (req, res) => {
-  res.json({ message: 'Hello, Node.js' })
-})
+  router.get('/', (req, res) => {
+    res.json({ message: 'Hello, Node.js' })
+  })
 
-router.post('/', (req, res) => {
-  res.json({ message: req.body })
-})
+  router.post('/', (req, res) => {
+    res.json({ message: req.body })
+  })
 
-export default router
+  export default router
