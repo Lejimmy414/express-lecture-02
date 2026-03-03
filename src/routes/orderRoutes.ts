@@ -1,29 +1,20 @@
-import { Router } from "express";
+import { Router, json} from "express";
+import fs from 'fs'
+import path from 'path'
+import * as orders from '../orderController.js'
 
 const router = Router()
 
-router.get('/', (req, res) => {
-    res.status(200).json({})
-})
+router.get('/', orders.list)
 
-router.post('/', (req, res) => {
-    res.status(201).json({})
-})
+router.post('/', json(), orders.post)
 
-router.get('/:uid', (req, res) => {
-    res.status(200).json({})
-})
+router.get('/:uid', orders.get)
 
-router.put('/:uid', (req, res) => {
-    res.status(200).json({})
-})
+router.put('/:uid', json(), orders.put)
 
-router.patch('/:uid', (req, res) => {
-    res.status(200).json({})
-})
+router.patch('/:uid', json(), orders.patch)
 
-router.delete('/:uid', (req, res) => {
-    res.status(204).send()
-})
+router.delete('/:uid', json(), orders.remove)
 
 export default router
